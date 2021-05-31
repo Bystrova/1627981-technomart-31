@@ -14,7 +14,7 @@
 </head>
 
 <body class="page-body">
-  <header>
+  <header class="header">
     <section class="header-top">
       <a>
         <img class="logo" src="img/logo-technomart.svg" width="220" height="47" alt="Интернет-магазин «Техномарт»">
@@ -24,10 +24,10 @@
         <!--<label for="searching">Поиск:</label>-->
         <input type="search" id="searching" name="searching" placeholder="Поиск">
       </form>
-      <ul>
-        <li class="purchase"><a class="bookmarks" href="#">Закладки: 0</a></li>
-        <li class="purchase"><a class="basket" href="#">Корзина: 0</a></li>
-        <li class="purchase"><a class="order" href="#">Оформить заказ</a></li>
+      <ul class="purchase">
+        <li><a class="bookmarks" href="#">Закладки: 0</a></li>
+        <li><a class="basket" href="#">Корзина: 0</a></li>
+        <li><a class="order" href="#">Оформить заказ</a></li>
       </ul>
     </section>
     <section class="header-bottom">
@@ -36,7 +36,7 @@
         строительных материалов<br>
         и инструментов для ремонта
       </p>
-      <a class="header-phone" href="tel:+78005558628">+7 800 222-86-28</a>
+      <a class="header-phone" href="tel:+78005558628">+7 800 555-86-28</a>
       <p class="header-address">
         г. Санкт-Петербург, наб. Реки Карповки, 5 лит П
       </p>
@@ -62,7 +62,7 @@
 
     <h1>Интернет-магазин «Техномарт»</h1>
 
-    <section>
+    <section class="features">
       <ul class="categories">
         <li class="category">
           <p class="category-name">Материалы</p>
@@ -285,7 +285,7 @@
       <a class="contact-us" href="#">Заблудились? Напишите нам!</a>
     </section>
   </main>
-  <footer>
+  <footer class="footer">
     <section class="footer-top">
       <a>
         <img class="logo" src="img/logo-technomart.svg" width="220" height="68" alt="Интернет-магазин «Техномарт»">
@@ -299,7 +299,7 @@
       </ul>
       <address class="footer-address">
         г. Санкт-Петербург, наб. Реки Карповки, 5 лит П<br>
-        <a class="footer-phone" href="tel:+78005558628">+7 800 222-86-28</a>
+        <a class="footer-phone" href="tel:+78005558628">+7 800 555-86-28</a>
       </address>
       <ul class="footer-top-info">
         <li><a class="category-item" href="#">Материалы</a></li>
@@ -338,15 +338,15 @@
     <h2>Обратная связь</h2>
     <form action="https://echo.htmlacademy.ru" method="post">
       <label>
-        Ваше имя:
+        <span class="user-field">Ваше имя:</span>
         <input type="text" name="user-name" placeholder="Имя Фамилия">
       </label>
       <label>
-        Ваш e-mail:
+        <span class="user-field">Ваш e-mail:</span>
         <input type="email" name="user-email" placeholder="email@example.com">
       </label>
       <label>
-        Текст письма:
+        <span class="user-field">Текст письма:</span>
         <textarea class="message" name="message" placeholder="В свободной форме"></textarea>
       </label>
       <div class="modal-bottom">
