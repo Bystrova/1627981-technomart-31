@@ -104,7 +104,7 @@ a {
 }
 
 .search-field {
-  font-family: "Cuprum", Arial;
+  font-family: "Cuprum", Arial, sans-serif;
   background-color: var(--basic-extra-dark);
   border: none;
 }
@@ -558,7 +558,7 @@ a {
   line-height: 18px;
 }
 
-/* Стили модального окна главной страницы */
+/* Модальное окно главной страницы */
 .user-field {
   font-family: "Cuprum", Arial, sans-serif;
 }
@@ -568,8 +568,7 @@ a {
   background-color: var(--modal-grey);
 }
 
-input[type="text"],
-input[type="email"],
+.input-field,
 .message {
   font-size: 13px;
   line-height: 24px;
@@ -577,7 +576,7 @@ input[type="email"],
   border-radius: 2px;
 }
 
-/* Стили страницы каталога */
+/* Каталог */
 
 .user,
 .user-features,
@@ -615,7 +614,7 @@ input[type="email"],
   font-weight: normal;
 }
 
-.breadcrumbs-item {
+.breadcrumbs a {
   color: var(--basic-black);
   font-size: 13px;
   line-height: 18px;
@@ -633,10 +632,12 @@ input[type="email"],
 .filter-companies {
   border: none;
   border-bottom: 1px solid var(--extra-light-grey);
+  text-transform: uppercase;
 }
 
 .filter-accumulators {
   border: none;
+  text-transform: uppercase;
 }
 
 .price,
@@ -668,27 +669,104 @@ input[type="email"],
   background-color: var(--basic-white);
 }
 
-.sorting {
+.sorting-container {
   background-color: var(--basic-extra-light);
+}
+
+.sorting {
+	font-size: 13px;
+    line-height: 18px;
+	text-transform: uppercase;
 }
 
 .sorting-list {
   list-style: none;
+  text-transform: uppercase;
 }
 
-.sorting-type-item {
+.sorting-radio-button + label {
   text-decoration: underline dotted var(--basic-red);
   opacity: 0.3;
   font-size: 13px;
   line-height: 17px;
 }
 
-.sorting-type-item:hover {
+.sorting-radio-button:hover + label {
   text-decoration: underline var(--basic-red);
   opacity: 1;
 }
 
-.sorting-type-item:active {
+.sorting-radio-button:checked + label {
   color: var(--basic-red);
   text-decoration: none;
+  opacity: 1;
+}
+
+.page-list {
+	list-style: none;
+	font-size: 13px;
+    line-height: 18px;
+}
+
+.page-link {
+	color: var(--basic-black);
+	border: 1px solid var(--extra-light-grey);
+	border-radius: 2px;
+}
+
+.page-link:hover {
+	border: 1px solid var(--basic-light-grey);
+}
+
+.page-link:active {
+	color: black;
+	border: 1px solid var(--basic-red);
+}
+
+.page-active {
+	color: var(--basic-white);
+	background-color: var(--basic-red);
+	border: none;
+}
+
+.about-perforators {
+	background-color: var(--basic-light-blue);
+}
+
+.about-perforators h2 {
+	font-family: Cuprum, Arial, sans-serif;
+	font-size: 30px;
+    line-height: 30px;
+	text-transform: uppercase;
+	font-weight: normal;
+}
+
+.about-perforators p {
+	font-size: 13px;
+}
+
+/* Модальное окно каталога */
+
+.addition-modal h3 {
+	font-family: Cuprum, Arial, sans-serif;
+	font-size: 24px;
+	line-height: 30px;
+}
+
+.modal-bottom a,
+.modal-bottom button {
+	font-size: 14px;
+    line-height: 18px;
+	text-transform: uppercase;
+	border: none;
+}
+
+.modal-bottom a {
+	color: var(--basic-white);
+	background-color: var(--basic-red);
+}
+
+.modal-bottom button {
+	color: var(--basic-black);
+	background-color: var(--basic-white);
 }
