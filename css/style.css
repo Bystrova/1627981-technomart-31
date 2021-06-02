@@ -1,13 +1,37 @@
 @font-face {
   font-family: "Cuprum";
-  src: url("../fonts/cuprum.woff2") format("woff2"),
-       url("../fonts/cuprum.woff") format("woff"),
-       url("../fonts/cuprumbold.woff2") format("woff2"),
-       url("../fonts/cuprumbold.woff") format("woff"),
-       url("../fonts/cuprumbolditalic.woff2") format("woff2"),
-       url("../fonts/cuprumbolditalic.woff") format("woff"),
-       url("../fonts/cuprumitalic.woff2") format("woff2"),
-       url("../fonts/cuprumitalic.woff") format("woff");
+  src: local("Cuprum"),
+    url("../fonts/cuprum.woff2") format("woff2"),
+    url("../fonts/cuprum.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Cuprum";
+  src: local("Cuprum"),
+    url("../fonts/cuprumbold.woff2") format("woff2"),
+    url("../fonts/cuprumbold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Cuprum";
+  src: local("Cuprum"),
+    url("../fonts/cuprumbolditalic.woff2") format("woff2"),
+    url("../fonts/cuprumbolditalic.woff") format("woff");
+  font-weight: 700;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Cuprum";
+  src: local("Cuprum"),
+    url("../fonts/cuprumitalic.woff2") format("woff2"),
+    url("../fonts/cuprumitalic.woff") format("woff");
+  font-weight: 400;
+  font-style: italic;
 }
 
 :root {
@@ -79,13 +103,13 @@ a {
   background-color: var(--basic-active-red);
 }
 
-input[type="search"] {
+.search-field {
   font-family: "Cuprum", Arial;
   background-color: var(--basic-extra-dark);
   border: none;
 }
 
-input[type="search"]:focus {
+.search-field:focus {
   background-color: var(--basic-white);
   border: none;
 }
@@ -148,37 +172,20 @@ input[type="search"]:focus {
 }
 
 .sign-in,
-.sign-up,
-.user-item {
+.sign-up {
   color: var(--basic-black);
   font-size: 21px;
   line-height: 21px;
 }
 
-.user-features-item {
-  color: var(--basic-dark);
-  font-size: 16px;
-  line-height: 18px;
-}
-
 .sign-in:hover,
-.sign-up:hover,
-.user-features-item:hover {
+.sign-up:hover {
   color: var(--basic-red);
 }
 
 .sign-in:active,
-.sign-up:active,
-.user-item:active,
-.user-features-item:active {
+.sign-up:active {
   color: var(--basic-light-grey);
-}
-
-.catalog-path-item {
-  color: var(--basic-black);
-  font-size: 13px;
-  line-height: 18px;
-  text-transform: uppercase;
 }
 
 .main-title {
@@ -308,7 +315,7 @@ input[type="search"]:focus {
   list-style: none;
 }
 
-.circle-button{
+.circle-button {
   list-style: none;
 }
 
@@ -398,7 +405,7 @@ input[type="search"]:focus {
   border-color: var(--basic-grey);
 }
 
-.manufacturers{
+.manufacturers {
   list-style: none;
 }
 
@@ -423,7 +430,7 @@ input[type="search"]:focus {
   text-transform: uppercase;
 }
 
-.service-name{
+.service-name {
   font-family: "Cuprum", Arial, sans-serif;
   font-weight: normal;
   font-size: 21px;
@@ -458,7 +465,7 @@ input[type="search"]:focus {
   background-color: var(--basic-dark);
 }
 
-.service-name-button:hover{
+.service-name-button:hover {
   background-color: var(--basic-extra-dark);
 }
 
@@ -532,7 +539,7 @@ input[type="search"]:focus {
   background-color: var(--basic-extra-dark);
 }
 
-.socials{
+.socials {
   list-style: none;
 }
 
@@ -574,7 +581,114 @@ input[type="email"],
 
 .user,
 .user-features,
-.catalog-path {
+.breadcrumbs {
   list-style: none;
+}
 
+.user-item {
+  color: var(--basic-black);
+  font-size: 21px;
+  line-height: 21px;
+}
+
+.user-features-item {
+  color: var(--basic-dark);
+  font-size: 16px;
+  line-height: 18px;
+}
+
+.user-features-item:hover {
+  color: var(--basic-red);
+}
+
+.user-item:active,
+.user-features-item:active {
+  color: var(--basic-light-grey);
+}
+
+.main-title {
+  font-family: "Cuprum", Arial, sans-serif;
+  color: var(--basic-dark);
+  text-transform: uppercase;
+  font-size: 30px;
+  line-height: 30px;
+  font-weight: normal;
+}
+
+.breadcrumbs-item {
+  color: var(--basic-black);
+  font-size: 13px;
+  line-height: 18px;
+  text-transform: uppercase;
+}
+
+.filter {
+  background-color: var(--basic-extra-light);
+  font-size: 13px;
+  line-height: 18px;
+  text-transform: uppercase;
+}
+
+.filter-price,
+.filter-companies {
+  border: none;
+  border-bottom: 1px solid var(--extra-light-grey);
+}
+
+.filter-accumulators {
+  border: none;
+}
+
+.price,
+.companies,
+.accumulators {
+  font-size: 17px;
+  line-height: 30px;
+  font-weight: bold;
+}
+
+.price-range {
+  background-color: var(--basic-extra-light);
+  font-size: 17px;
+  line-height: 18px;
+}
+
+.companies-list,
+.accumulators-list {
+  list-style: none;
+  font-size: 15px;
+  line-height: 19px;
+}
+
+.show-button {
+  font-size: 13px;
+  line-height: 18px;
+  text-transform: uppercase;
+  border: 1px solid var(--extra-light-grey);
+  background-color: var(--basic-white);
+}
+
+.sorting {
+  background-color: var(--basic-extra-light);
+}
+
+.sorting-list {
+  list-style: none;
+}
+
+.sorting-type-item {
+  text-decoration: underline dotted var(--basic-red);
+  opacity: 0.3;
+  font-size: 13px;
+  line-height: 17px;
+}
+
+.sorting-type-item:hover {
+  text-decoration: underline var(--basic-red);
+  opacity: 1;
+}
+
+.sorting-type-item:active {
+  color: var(--basic-red);
+  text-decoration: none;
 }
