@@ -72,7 +72,7 @@ body {
   padding: 0;
   font-family: "PT Sans", Arial, sans-serif;
   line-height: 24px;
-  font-size: 18px;
+  font-size: 13px;
   font-weight: 400;
 }
 
@@ -105,6 +105,7 @@ a {
 
 .search-field {
   font-family: "Cuprum", Arial, sans-serif;
+  font-size: 18px;
   background-color: var(--basic-extra-dark);
   border: none;
 }
@@ -123,6 +124,7 @@ a {
 .order,
 .menu-item {
   color: var(--basic-white);
+  font-size: 18px;
 }
 
 .order {
@@ -280,6 +282,7 @@ a {
   color:
     /*var(--basic-white)*/
     black;
+  font-size: 18px;
 }
 
 .catalog-open,
@@ -345,9 +348,13 @@ a {
 }
 
 .goods-heading {
-  color: var(--basic-black);
   font-weight: bold;
   line-height: 20px;
+  font-size: 18px;
+}
+
+.goods-heading a {
+  color: var(--basic-black);
 }
 
 .old-price {
@@ -506,6 +513,7 @@ a {
 
 .footer {
   font-family: "Cuprum", Arial, sans-serif;
+  font-size: 18px;
 }
 
 .footer-top-info {
@@ -621,11 +629,12 @@ a {
   text-transform: uppercase;
 }
 
-.filter {
+.filter-heading {
   background-color: var(--basic-extra-light);
   font-size: 13px;
   line-height: 18px;
   text-transform: uppercase;
+  font-weight: normal;
 }
 
 .filter-price,
@@ -673,10 +682,11 @@ a {
   background-color: var(--basic-extra-light);
 }
 
-.sorting {
-	font-size: 13px;
-    line-height: 18px;
-	text-transform: uppercase;
+.sorting-heading {
+  font-size: 13px;
+  line-height: 18px;
+  text-transform: uppercase;
+  font-weight: normal;
 }
 
 .sorting-list {
@@ -684,89 +694,91 @@ a {
   text-transform: uppercase;
 }
 
-.sorting-radio-button + label {
+.sorting-type-link {
+  color: var(--basic-black);
   text-decoration: underline dotted var(--basic-red);
   opacity: 0.3;
   font-size: 13px;
   line-height: 17px;
 }
 
-.sorting-radio-button:hover + label {
+.sorting-type-link:hover {
+  color: var(--basic-black);
   text-decoration: underline var(--basic-red);
   opacity: 1;
 }
 
-.sorting-radio-button:checked + label {
+.sorting-active {
   color: var(--basic-red);
   text-decoration: none;
   opacity: 1;
 }
 
 .page-list {
-	list-style: none;
-	font-size: 13px;
-    line-height: 18px;
+  list-style: none;
+  font-size: 13px;
+  line-height: 18px;
 }
 
 .page-link {
-	color: var(--basic-black);
-	border: 1px solid var(--extra-light-grey);
-	border-radius: 2px;
+  color: var(--basic-black);
+  border: 1px solid var(--extra-light-grey);
+  border-radius: 2px;
 }
 
 .page-link:hover {
-	border: 1px solid var(--basic-light-grey);
+  border: 1px solid var(--basic-light-grey);
 }
 
 .page-link:active {
-	color: black;
-	border: 1px solid var(--basic-red);
+  color: black;
+  border: 1px solid var(--basic-red);
 }
 
 .page-active {
-	color: var(--basic-white);
-	background-color: var(--basic-red);
-	border: none;
+  color: var(--basic-white);
+  background-color: var(--basic-red);
+  border: none;
 }
 
 .about-perforators {
-	background-color: var(--basic-light-blue);
+  background-color: var(--basic-light-blue);
 }
 
 .about-perforators h2 {
-	font-family: Cuprum, Arial, sans-serif;
-	font-size: 30px;
-    line-height: 30px;
-	text-transform: uppercase;
-	font-weight: normal;
+  font-family: "Cuprum", Arial, sans-serif;
+  font-size: 30px;
+  line-height: 30px;
+  text-transform: uppercase;
+  font-weight: normal;
 }
 
 .about-perforators p {
-	font-size: 13px;
+  font-size: 13px;
 }
 
 /* Модальное окно каталога */
 
 .addition-modal h3 {
-	font-family: Cuprum, Arial, sans-serif;
-	font-size: 24px;
-	line-height: 30px;
+  font-family: "Cuprum", Arial, sans-serif;
+  font-size: 24px;
+  line-height: 30px;
 }
 
 .modal-bottom a,
 .modal-bottom button {
-	font-size: 14px;
-    line-height: 18px;
-	text-transform: uppercase;
-	border: none;
+  font-size: 14px;
+  line-height: 18px;
+  text-transform: uppercase;
+  border: none;
 }
 
 .modal-bottom a {
-	color: var(--basic-white);
-	background-color: var(--basic-red);
+  color: var(--basic-white);
+  background-color: var(--basic-red);
 }
 
 .modal-bottom button {
-	color: var(--basic-black);
-	background-color: var(--basic-white);
+  color: var(--basic-black);
+  background-color: var(--basic-white);
 }
