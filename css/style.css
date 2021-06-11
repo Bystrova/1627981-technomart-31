@@ -71,7 +71,7 @@
   height: 100%;
 }
 
-body {
+.page-body {
   min-width: 960px;
   margin: 0;
   padding: 0;
@@ -80,6 +80,9 @@ body {
   font-size: 13px;
   font-weight: 400;
   min-height: 100%;
+
+  display: grid;
+  grid-template-rows: min-content 1fr min-content;
 }
 
 img {
@@ -148,10 +151,6 @@ a {
   display: flex;
 }
 
-.purchase li {
-  display: block;
-}
-
 .bookmarks,
 .basket,
 .order,
@@ -163,16 +162,17 @@ a {
 }
 
 .bookmarks,
-.basket {
-  margin-left: 50px;
+.basket,
+.order {
+  display: flex;
+  width: 150px;
+  height: 42px;
+  justify-content: center;
+  align-items: center;
 }
 
 .order {
   background-color: var(--basic-green);
-  margin-left: 26px;
-  width: 150px;
-  height: 42px;
-  padding: 10px 19px 11px 16px;
 }
 
 .order:hover {
@@ -284,7 +284,7 @@ a {
 
 .header-menu {
   list-style: none;
-  margin: 0 26.5px 0 26.5px;
+  margin: 0 25px;
   padding: 0;
   display: flex;
   justify-content: space-around;
@@ -499,8 +499,9 @@ a {
 }
 
 .goods-container {
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 20px;
 }
 
 .popular-heading {
@@ -516,7 +517,6 @@ a {
 
 .popular-item {
   border: 1px solid var(--extra-light-grey);
-  width: 220px;
 }
 
 .goods .popular-item:hover {
@@ -738,9 +738,12 @@ a {
   padding: 0;
 }
 
-.company-description:nth-child(2) {
-  display: block;
-  margin-bottom: 27px;
+.company-description {
+  margin-bottom: 26px;
+}
+
+.company-description + .company-description {
+  margin-bottom: 1px;
 }
 
 .transport-companies li {
@@ -793,12 +796,21 @@ a {
   display: flex;
 }
 
+.footer-top-container:first-child {
+  width: 36%;
+}
+
+.footer-top-container:last-child {
+   width: 64%;
+}
+
 .footer-top-info {
   list-style: none;
   margin-top: 37px;
   padding: 0;
   display: flex;
   justify-content: flex-end;
+  flex-wrap: wrap;
 }
 
 .footer-logo .logo {
@@ -843,11 +855,16 @@ a {
 .footer-bottom .center-container {
   color: var(--basic-white);
   width: 940px;
-
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  /* display: flex;
   justify-content: space-between;
   align-items: center;
-  min-height: 107px;
+  min-height: 107px; */
+}
+
+.footer-bottom-container:last-child {
+  display: flex;
 }
 
 .copyright,
@@ -860,12 +877,9 @@ a {
 
 .socials {
   margin: 0;
-  padding: 0;
+  padding: 0 97px 0 70px;
   list-style: none;
-}
-
-.socials+div {
-  display: flex;
+  text-align: center;
 }
 
 .email {
