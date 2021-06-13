@@ -189,6 +189,14 @@ a {
   color: var(--basic-opacity-white);
 }
 
+.not-empty {
+  background-color: var(--basic-red);
+}
+
+.not-empty:active {
+  background-color: var(--basic-active-red);
+}
+
 .header-bottom {
   background-color: var(--basic-light-blue);
   padding-bottom: 60px;
@@ -739,11 +747,11 @@ a {
 }
 
 .company-description {
-  margin-bottom: 26px;
+  margin: 0 0 27px 0;
 }
 
-.company-description+.company-description {
-  margin-bottom: 1px;
+.transport-companies-description {
+  margin: 0;
 }
 
 .transport-companies li {
@@ -919,11 +927,6 @@ a {
   gap: 20px;
 }
 
-.user-container {
-  display: flex;
-  flex-direction: column;
-}
-
 .login {
   list-style: none;
   margin: 0;
@@ -935,9 +938,6 @@ a {
 .user,
 .user-features {
   list-style: none;
-  grid-column: -1/-2;
-  align-self: center;
-  justify-self: right;
   margin: 0;
   padding: 0;
 
@@ -1000,12 +1000,19 @@ a {
   display: flex;
 }
 
+.breadcrumbs li {
+  margin-right: 41px;
+}
+
+.breadcrumbs li:last-child {
+  margin-right: 0;
+}
+
 .breadcrumbs a {
   color: var(--basic-black);
   font-size: 13px;
   line-height: 18px;
   text-transform: uppercase;
-  margin-right: 41px;
 }
 
 .filter-heading {
@@ -1115,8 +1122,8 @@ a {
 
   display: grid;
   grid-template-columns: min-content 1fr;
-  height: 38px;
   margin-bottom: 28px;
+  padding: 10px 14px 10px 19px;
 }
 
 .sorting-heading {
@@ -1124,13 +1131,8 @@ a {
   line-height: 18px;
   text-transform: uppercase;
   font-weight: normal;
-  align-self: center;
-  margin: 0 140px 0 19px;
+  margin: 0;
   padding: 0;
-}
-
-.sorting-form {
-  align-self: center;
 }
 
 .sorting-list-container {
@@ -1138,22 +1140,35 @@ a {
   grid-template-columns: 1fr min-content;
 }
 
-.sorting-list {
+.sorting-type-list {
   list-style: none;
   text-transform: uppercase;
-  margin: 0;
+  margin: 0 46px 0 0;
   padding: 0;
 
   display: flex;
-  justify-content: space-around;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+}
+
+.sorting-type-item {
+  margin-right: 67px;
+
+}
+
+.sorting-type-item:last-child {
+  margin-right: 0;
+}
+
+.sorting-direction-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
 }
 
 .sorting-list-item:first-child {
-  padding-right: 21px;
-}
-
-.sorting-list-item:last-child {
-  padding-right: 14px;
+  margin-right: 21px;
 }
 
 .sorting-type-link {
@@ -1162,6 +1177,8 @@ a {
   opacity: 0.3;
   font-size: 13px;
   line-height: 17px;
+
+  display: block;
 }
 
 .sorting-type-link:hover {
@@ -1203,17 +1220,16 @@ a {
   border: 1px solid var(--extra-light-grey);
   border-radius: 2px;
 
-  width: 38px;
-  height: 38px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-right: 10px;
+  display: block;
+  padding: 9px 15px;
   margin-bottom: 59px;
+  margin-right: 10px;
 }
 
 .next {
   width: 140px;
+  text-transform: uppercase;
+  text-align: center;
 }
 
 .page-link:hover:not(.page-active) {
@@ -1248,7 +1264,7 @@ a {
 }
 
 .about-perforators p {
-  font-size: 13px;
+  font-size: 12px;
   padding: 0;
   margin: 0;
 }
