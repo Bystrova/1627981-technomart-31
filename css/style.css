@@ -221,7 +221,7 @@ a {
   align-items: center;
   justify-content: center;
   width: 270px;
-  height: 45px;
+  height: 39px;
 }
 
 .header-address {
@@ -742,7 +742,7 @@ a {
   margin-bottom: 26px;
 }
 
-.company-description + .company-description {
+.company-description+.company-description {
   margin-bottom: 1px;
 }
 
@@ -801,7 +801,7 @@ a {
 }
 
 .footer-top-container:last-child {
-   width: 64%;
+  width: 64%;
 }
 
 .footer-top-info {
@@ -857,10 +857,6 @@ a {
   width: 940px;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  /* display: flex;
-  justify-content: space-between;
-  align-items: center;
-  min-height: 107px; */
 }
 
 .footer-bottom-container:last-child {
@@ -923,12 +919,37 @@ a {
   gap: 20px;
 }
 
+.user-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.login {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  display: flex;
+}
+
 .user,
 .user-features {
   list-style: none;
   grid-column: -1/-2;
   align-self: center;
   justify-self: right;
+  margin: 0;
+  padding: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.user {
+  background-color: var(--basic-white);
+  width: 299px;
+  height: 45px;
 }
 
 .user-item {
@@ -952,6 +973,10 @@ a {
   color: var(--basic-light-grey);
 }
 
+.catalog-header {
+  margin-bottom: 21px;
+}
+
 .main-title {
   font-family: "Cuprum", Arial, sans-serif;
   display: block;
@@ -971,6 +996,8 @@ a {
   margin: 0;
   padding: 0;
   grid-column: 1/-1;
+
+  display: flex;
 }
 
 .breadcrumbs a {
@@ -978,6 +1005,7 @@ a {
   font-size: 13px;
   line-height: 18px;
   text-transform: uppercase;
+  margin-right: 41px;
 }
 
 .filter-heading {
@@ -986,8 +1014,9 @@ a {
   line-height: 18px;
   text-transform: uppercase;
   font-weight: normal;
-  margin: 0;
-  padding: 0;
+  margin: 0 0 14px 0;
+  padding: 10px 0 10px 18px;
+  width: 202px;
 }
 
 .filter-price,
@@ -1018,6 +1047,38 @@ a {
   background-color: var(--basic-extra-light);
   font-size: 17px;
   line-height: 18px;
+  width: 220px;
+  height: 80px;
+  margin-bottom: 9px;
+  vertical-align: middle;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.price-range-output {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+}
+
+.price-min-max {
+  background-color: var(--basic-extra-light);
+  font-size: 17px;
+  line-height: 18px;
+  width: 95px;
+  height: 38px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.companies,
+.accumulators {
+  padding: 16px 0 17px 0;
 }
 
 .companies-list,
@@ -1025,6 +1086,13 @@ a {
   list-style: none;
   font-size: 15px;
   line-height: 19px;
+  margin: 0;
+  padding: 0;
+}
+
+.companies-list li,
+.accumulators-list li {
+  margin-bottom: 20px;
 }
 
 .show-button {
@@ -1033,11 +1101,22 @@ a {
   text-transform: uppercase;
   border: 1px solid var(--extra-light-grey);
   background-color: var(--basic-white);
+  width: 220px;
+  height: 38px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .sorting-container {
   background-color: var(--basic-extra-light);
   grid-column: 2/-1;
+
+  display: grid;
+  grid-template-columns: min-content 1fr;
+  height: 38px;
+  margin-bottom: 28px;
 }
 
 .sorting-heading {
@@ -1045,8 +1124,18 @@ a {
   line-height: 18px;
   text-transform: uppercase;
   font-weight: normal;
-  margin: 0;
+  align-self: center;
+  margin: 0 140px 0 19px;
   padding: 0;
+}
+
+.sorting-form {
+  align-self: center;
+}
+
+.sorting-list-container {
+  display: grid;
+  grid-template-columns: 1fr min-content;
 }
 
 .sorting-list {
@@ -1054,6 +1143,17 @@ a {
   text-transform: uppercase;
   margin: 0;
   padding: 0;
+
+  display: flex;
+  justify-content: space-around;
+}
+
+.sorting-list-item:first-child {
+  padding-right: 21px;
+}
+
+.sorting-list-item:last-child {
+  padding-right: 14px;
 }
 
 .sorting-type-link {
@@ -1077,22 +1177,46 @@ a {
 }
 
 .goods-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
   grid-column: 2/-1;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 20px;
+  padding-bottom: 48px;
 }
 
 .page-list {
   list-style: none;
   font-size: 13px;
   line-height: 18px;
+  margin: 0;
+  padding: 0;
+
+  display: flex;
 }
 
 .page-link {
   color: var(--basic-black);
   border: 1px solid var(--extra-light-grey);
   border-radius: 2px;
+
+  width: 38px;
+  height: 38px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 10px;
+  margin-bottom: 59px;
 }
 
-.page-link:hover {
+.next {
+  width: 140px;
+}
+
+.page-link:hover:not(.page-active) {
   border: 1px solid var(--basic-light-grey);
 }
 
@@ -1120,7 +1244,7 @@ a {
   text-transform: uppercase;
   font-weight: normal;
   padding: 0;
-  margin: 0;
+  margin: 0 0 25px 0;
 }
 
 .about-perforators p {
