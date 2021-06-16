@@ -828,7 +828,6 @@ a {
   background-image: url("../img/icons/price-button.svg");
   background-repeat: no-repeat;
   display: block;
-  width: 65px;
   padding: 10px 44px 10px 32px;
   margin-bottom: 21px;
 }
@@ -1223,6 +1222,7 @@ a {
 .info-item:active,
 .category-item:active {
   opacity: 0.5;
+  text-decoration: none;
 }
 
 .footer-bottom {
@@ -1314,6 +1314,7 @@ a {
 .email:active,
 .website:active {
   color: var(--basic-red);
+  text-decoration: none;
 }
 
 /* Модальное окно главной страницы */
@@ -1363,15 +1364,16 @@ a {
   line-height: 24px;
   border: 2px solid var(--basic-light-grey);
   border-radius: 2px;
+  padding: 5px 8px 5px 12px;
 }
 
 .input-field {
-  height: 28px;
   margin-bottom: 13px;
+
 }
 
 .message {
-  height: 114px;
+  height: 100px;
   margin-bottom: 37px;
 }
 
