@@ -577,7 +577,7 @@ a {
   align-items: center;
   justify-content: center;
   width: 135px;
-  height: 38px;
+  min-height: 38px;
   margin-left: 23px;
 }
 
@@ -598,6 +598,10 @@ a {
 .slide {
   display: none;
   position: relative;
+}
+
+.slide img {
+  object-fit: contain;
 }
 
 .current {
@@ -643,22 +647,21 @@ a {
   background-color: var(--basic-red);
   padding: 0;
   margin: 0;
-  height: 38px;
-
+  min-height: 38px;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
 .catalog-open {
-  width: 192px;
+  min-width: 192px;
   position: absolute;
   bottom: 27px;
   left: 24px;
 }
 
 .all-popular {
-  width: 192px;
+  min-width: 192px;
   margin: 25px 14px 26px 0;
 }
 
@@ -689,8 +692,6 @@ a {
   width: 572px;
   display: flex;
   justify-content: space-between;
-  position: absolute;
-  bottom: 104px;
 }
 
 .left-button,
@@ -701,14 +702,34 @@ a {
   background-color: transparent;
   cursor: pointer;
   border: none;
+  position: absolute;
+  bottom: 104px;
 }
 
 .left-button {
   background-image: url("../img/icons/left-button.svg");
+
 }
 
 .right-button {
   background-image: url("../img/icons/right-button.svg");
+  right: 21px;
+}
+
+.right-button:hover {
+  right: 18px;
+}
+
+.right-button:active {
+  right: 21px;
+}
+
+.left-button:hover {
+  left: 21px;
+}
+
+.left-button:active {
+  left: 24px;
 }
 
 .circle-button {
@@ -731,6 +752,16 @@ a {
   background-color: var(--basic-white);
   cursor: pointer;
   margin-right: 10px;
+}
+
+.circle-button button:hover {
+  width: 15px;
+  height: 15px;
+}
+
+.circle-button button:active {
+  width: 10px;
+  height: 10px;
 }
 
 .circle-button .current-slide {
@@ -855,8 +886,9 @@ a {
   line-height: 18px;
   background-image: url("../img/icons/price-button.svg");
   background-repeat: no-repeat;
+  background-size: 100% 100%;
   display: block;
-  padding: 10px 0 10px;
+  padding: 10px 10px 10px 0;
   text-align: center;
 }
 
@@ -953,6 +985,10 @@ a {
   gap: 20px;
 }
 
+.manufacturers img {
+  object-fit: contain;
+}
+
 .manufacturers .popular-item {
   width: 220px;
   height: 145px;
@@ -1003,6 +1039,8 @@ a {
   padding: 0;
   margin: 0;
   position: relative;
+  background-color: green;
+  align-self: flex-start;
 }
 
 .service-name::after {
@@ -1013,7 +1051,7 @@ a {
   background-repeat: no-repeat;
   position: absolute;
   left: 230px;
-  bottom: 54px;
+  top: -45px;
 }
 
 .service-slider {
@@ -1026,7 +1064,7 @@ a {
 .service-slider-item {
   margin: 0;
   padding: 0;
-  height: 283px;
+  min-height: 283px;
   display: none;
 }
 
@@ -1099,7 +1137,7 @@ a {
   font-size: 14px;
   line-height: 18px;
   padding: 0;
-  margin: 0;
+  margin: 0 0 20px 0;
   height: 38px;
 
   display: flex;
@@ -1124,6 +1162,10 @@ a {
 
 .info section {
   margin-bottom: 70px;
+}
+
+.info section:first-child {
+  padding-right: 80px;
 }
 
 .transport-companies {
@@ -1274,6 +1316,10 @@ a {
   grid-template-columns: 1fr 1fr 1fr;
 }
 
+.footer-bottom-container:nth-child(2) {
+  width: 70%;
+}
+
 .footer-bottom-container:last-child {
   display: flex;
 }
@@ -1290,42 +1336,43 @@ a {
 
 .socials {
   margin: 0;
-  padding: 0 97px 0 70px;
+  padding: 0 0 0 75px;
   list-style: none;
   text-align: center;
-  position: relative;
   display: flex;
+  flex-wrap: wrap;
+  width: 100%;
 }
 
-.social-button::before {
-  content: "";
+.socials li {
+  margin: 0 5px 5px 0;
+}
+
+.social-button {
+  display: block;
   width: 44px;
   height: 44px;
-  position: absolute;
   border-radius: 50%;
   background-color: var(--socials-background);
   background-repeat: no-repeat;
   background-position: 50% 50%;
 }
 
-.social-button:hover::before,
-.social-button:active::before {
+.social-button:hover,
+.social-button:active {
   background-color: var(--basic-red);
 }
 
-.vk::before {
+.vk {
   background-image: url("../img/socials/vk.svg");
-  left: 77px;
 }
 
-.fb::before {
+.fb {
   background-image: url("../img/socials/fb.svg");
-  left: 129px;
 }
 
-.insta::before {
+.insta {
   background-image: url("../img/socials/insta.svg");
-  left: 180px;
 }
 
 .email {
@@ -1467,7 +1514,6 @@ a {
   background-size: 7px 7px;
   position: absolute;
   box-shadow: none;
-
 }
 
 .close-button:active::before {
@@ -1543,9 +1589,10 @@ a {
 
 .user {
   background-color: var(--basic-white);
-  width: 299px;
-  height: 45px;
+  width: 219px;
+  min-height: 25px;
   margin-bottom: 5px;
+  padding: 10px 40px;
 }
 
 .user-name,
@@ -1555,6 +1602,7 @@ a {
   line-height: 21px;
   display: block;
   position: relative;
+  text-align: center;
 }
 
 .user-name::before {
@@ -1564,6 +1612,7 @@ a {
   background-image: url("../img/icons/user.svg");
   background-repeat: no-repeat;
   position: absolute;
+  top: 10%;
   left: -35px;
   opacity: 0.4;
 }
@@ -1575,7 +1624,7 @@ a {
   background-image: url("../img/icons/logout.svg");
   background-repeat: no-repeat;
   position: absolute;
-  left: 15px;
+  right: -35px;
   top: -9px;
   opacity: 0.4;
 }
@@ -1669,14 +1718,20 @@ a {
   text-transform: uppercase;
 }
 
-.breadcrumbs-home:before {
-  content: "";
-  width: 14px;
-  height: 12px;
-  background-image: url("../img/icons/home.svg");
-  background-repeat: no-repeat;
-  position: absolute;
-  top: 5px;
+.breadcrumbs-item:hover:not(.breadcrumbs-last) {
+  color: var(--basic-red);
+}
+
+.breadcrumbs-item:active:not(.breadcrumbs-last) {
+  color: var(--basic-grey);
+}
+
+.breadcrumbs-image:hover path {
+  fill: var(--basic-red);
+}
+
+.breadcrumbs-image:active path {
+  fill: var(--basic-grey);
 }
 
 .breadcrumbs li:first-child:after {
@@ -1692,6 +1747,10 @@ a {
   position: absolute;
   top: 5px;
   right: -25px;
+}
+
+.breadcrumbs li:first-child:after {
+  right: -23px;
 }
 
 .breadcrumbs li:last-child::after {
@@ -1932,6 +1991,7 @@ a {
   justify-content: center;
   align-items: center;
   cursor: pointer;
+  margin-bottom: 20px;
 }
 
 .show-button:hover {
@@ -1984,7 +2044,6 @@ a {
 
 .sorting-type-item {
   margin-right: 67px;
-
 }
 
 .sorting-type-item:last-child {
