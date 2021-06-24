@@ -1415,8 +1415,9 @@ a {
   min-width: 620px;
   background-color: var(--basic-white);
   box-shadow: 0px 4px 20px var(--modal-shadow), inset 0px 7px 0px var(--basic-red);
-  left: 33%;
-  bottom: 20%;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
   padding-top: 46px;
 }
 
@@ -1527,7 +1528,9 @@ a {
   width: 943px;
   height: 449px;
   box-shadow: 0px 4px 20px var(--modal-shadow), inset 0px 7px 0px var(--basic-red);
-  bottom: 20%;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
   background-image: url(../img/modal-map.png);
   background-repeat: no-repeat;
 }
@@ -2203,8 +2206,9 @@ a {
   min-width: 620px;
   background-color: var(--basic-white);
   box-shadow: 0px 4px 20px var(--modal-shadow), inset 0px 7px 0px var(--basic-red);
-  left: 34%;
-  bottom: 50%;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
   padding-top: 36px;
 }
 
