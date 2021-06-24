@@ -1281,6 +1281,10 @@ a {
   margin-top: 33px;
 }
 
+.footer-top-info li {
+  margin-left: 58px;
+}
+
 .footer-address {
   font-style: normal;
   margin: 22px 0 0 3px;
@@ -1291,14 +1295,8 @@ a {
   text-decoration: inherit;
 }
 
-.info-item {
-  padding-left: 58px;
-}
-
 .category-item {
   color: var(--basic-light-orange);
-  padding-left: 58px;
-
 }
 
 .info-item:hover,
@@ -1413,12 +1411,12 @@ a {
 /* Модальное окно главной страницы */
 
 .feedback-modal {
-  position: absolute;
+  position: fixed;
   min-width: 620px;
   background-color: var(--basic-white);
   box-shadow: 0px 4px 20px var(--modal-shadow), inset 0px 7px 0px var(--basic-red);
-  left: 17%;
-  bottom: -18px;
+  left: 33%;
+  bottom: 20%;
   padding-top: 46px;
 }
 
@@ -1525,11 +1523,11 @@ a {
 }
 
 .modal-map {
-  position: absolute;
+  position: fixed;
   width: 943px;
   height: 449px;
   box-shadow: 0px 4px 20px var(--modal-shadow), inset 0px 7px 0px var(--basic-red);
-  bottom: -37px;
+  bottom: 20%;
   background-image: url(../img/modal-map.png);
   background-repeat: no-repeat;
 }
@@ -2201,12 +2199,12 @@ a {
 /* Модальное окно каталога */
 
 .addition-modal {
-  position: absolute;
+  position: fixed;
   min-width: 620px;
   background-color: var(--basic-white);
   box-shadow: 0px 4px 20px var(--modal-shadow), inset 0px 7px 0px var(--basic-red);
   left: 34%;
-  bottom: 40px;
+  bottom: 50%;
   padding-top: 36px;
 }
 
