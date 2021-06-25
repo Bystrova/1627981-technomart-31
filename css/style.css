@@ -73,6 +73,15 @@
   --modal-shadow: rgba(0, 0, 0, 0.15);
 }
 
+@keyframes appearence {
+  0% {
+    left: 0%;
+  }
+  50% {
+    left: 70%;
+  }
+}
+
 .page {
   height: 100%;
 }
@@ -1223,6 +1232,14 @@ a {
   margin: 0 0 25px 0;
 }
 
+.map:hover {
+  box-shadow: 0 0 10px 2px var(--basic-grey);
+}
+
+.map:active {
+  box-shadow: none;
+}
+
 .info-item {
   color: var(--basic-white);
 }
@@ -1419,6 +1436,8 @@ a {
   top: 50%;
   transform: translate(-50%, -50%);
   padding-top: 46px;
+  display: none;
+
 }
 
 .modal-center-container {
@@ -1519,10 +1538,6 @@ a {
   opacity: 0.3;
 }
 
-.modal-hide {
-  display: none;
-}
-
 .modal-map {
   position: fixed;
   width: 943px;
@@ -1533,6 +1548,7 @@ a {
   transform: translate(-50%, -50%);
   background-image: url(../img/modal-map.png);
   background-repeat: no-repeat;
+  display: none;
 }
 
 .modal-map iframe {
@@ -2210,6 +2226,7 @@ a {
   top: 50%;
   transform: translate(-50%, -50%);
   padding-top: 36px;
+  display: none;
 }
 
 .addition-modal h3 {
@@ -2278,4 +2295,10 @@ a {
 
 .continue-button:active {
   border: 1px solid var(--basic-red);
+}
+
+.modal-show {
+  display: block;
+  animation-name: appearence;
+  animation-duration: 0.5s;
 }

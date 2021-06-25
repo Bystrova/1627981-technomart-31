@@ -168,6 +168,19 @@
           <span><a href="#" class="new-price">12500 Р.</a></span>
         </li>
       </ul>
+      <section class="addition-modal">
+        <div class="modal-center-container">
+          <h3>Товар добавлен в корзину!</h3>
+        </div>
+        <div class="modal-bottom">
+          <div class="modal-center-container">
+            <a class="modal-order-link" href="#">Оформить заказ</a>
+            <button class="continue-button" type="button">Продолжить покупки</button>
+          </div>
+        </div>
+        <button class="close-button" type=" button" aria-label="Закрыть"></button>
+
+      </section>
     </section>
     <section class="popular-manufacturers center-container">
       <div class="popular">
@@ -299,27 +312,27 @@
           Вы можете забрать товар сами,<br>
           заехав в наш офис:
         </p>
-        <a href="#">
+        <a href="#" class="map-link">
           <img class="map" src="img/map.png" width="300" height="158"
             alt="г. Санкт-Петербург, наб. Реки Карповки, 5 лит П">
         </a>
         <a class="contact-us" href="#">Заблудились? Напишите нам!</a>
       </section>
-      <section class="feedback-modal modal-hide">
+      <section class="feedback-modal">
         <h2 class="visually-hidden">Обратная связь</h2>
-        <form action="https://echo.htmlacademy.ru" method="post">
+        <form action="https://echo.htmlacademy.ru" method="post" class="feedback-form">
           <div class="modal-top modal-center-container">
             <label>
               <span class="user-field">Ваше имя:</span>
-              <input class="input-field" type="text" name="user-name" placeholder="Имя Фамилия">
+              <input class="input-field" type="text" name="user-name" placeholder="Имя Фамилия" required>
             </label>
             <label>
               <span class="user-field">Ваш e-mail:</span>
-              <input class="input-field" type="email" name="user-email" placeholder="email@example.com">
+              <input class="input-field" type="email" name="user-email" placeholder="email@example.com" required>
             </label>
             <label>
               <span class="user-field">Текст письма:</span>
-              <textarea class="message" name="message" placeholder="В свободной форме"></textarea>
+              <textarea class="message" name="message" placeholder="В свободной форме" required></textarea>
             </label>
           </div>
           <div class="modal-bottom">
@@ -328,7 +341,7 @@
           <button class="close-button" type="button" aria-label="Закрыть"></button>
         </form>
       </section>
-      <section class="modal-map modal-hide">
+      <section class="modal-map">
         <iframe
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1996.818026615573!2d30.315192316098244!3d59.96834198188698!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696315bc4e8ce61%3A0xe703c377f3424272!2sStudio%20212!5e0!3m2!1sru!2sru!4v1624018678772!5m2!1sru!2sru"
           width="943" height="442" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
@@ -400,6 +413,9 @@
       </div>
     </section>
   </footer>
+  <script src="js/feedback-modal.js"></script>
+  <script src="js/map-modal.js"></script>
+  <script src="js/addition-modal.js"></script>
 </body>
 
 </html>
