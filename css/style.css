@@ -82,6 +82,22 @@
   }
 }
 
+@keyframes shake {
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
+    left: 51%;
+  }
+  20%,
+  40%,
+  60%,
+  80% {
+    left: 49%;
+  }
+}
+
 .page {
   height: 100%;
 }
@@ -748,7 +764,7 @@ a {
   height: 10px;
   border: 2px solid var(--basic-white);
   border-radius: 50%;
-  background-color: var(--basic-white);
+  background-color: var(--basic-red);
   cursor: pointer;
   margin-right: 10px;
 }
@@ -764,7 +780,7 @@ a {
 }
 
 .circle-button .current-slide {
-  background-color: var(--basic-red);
+  background-color: var(--basic-white);
 }
 
 .popular-goods {
@@ -2301,4 +2317,9 @@ a {
   display: block;
   animation-name: appearence;
   animation-duration: 0.5s;
+}
+
+.modal-error {
+  animation-name: shake;
+  animation-duration: 0.4s;
 }

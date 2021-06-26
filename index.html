@@ -22,9 +22,8 @@
         </a>
         <div class="header-top-container">
           <form class="search-form">
-            <label class="search-label visually-hidden" for="searching"></label>
-            <input class="search-field" type="search" id="searching" form="search" name="searching"
-              placeholder="Поиск:">
+            <label class="search-label" for="searching" aria-label="Поиск"></label>
+            <input class="search-field" type="search" id="searching" name="searching" placeholder="Поиск:">
             <a href="#" class="search-link"><span class="visually-hidden">Найти</span></a>
           </form>
           <ul class="purchase">
@@ -107,12 +106,12 @@
             <a class="catalog-open" href="#">Открыть каталог</a>
           </div>
           <ul class="arrow-button">
-            <li><button class="left-button" type=" button" aria-label="Влево"></button></li>
+            <li><button class="left-button" type="button" aria-label="Влево"></button></li>
             <li><button class="right-button" type="button" aria-label="Вправо"></button></li>
           </ul>
           <ul class="circle-button">
-            <li><button type="button" aria-label="Первый слайд"></button></li>
-            <li><button class="current-slide" type="button" aria-label="Второй слайд"></button></li>
+            <li><button class="circle current-slide" type="button" aria-label="Первый слайд"></button></li>
+            <li><button class="circle" type="button" aria-label="Второй слайд"></button></li>
           </ul>
         </div>
       </section>
@@ -178,7 +177,7 @@
             <button class="continue-button" type="button">Продолжить покупки</button>
           </div>
         </div>
-        <button class="close-button" type=" button" aria-label="Закрыть"></button>
+        <button class="close-button" type="button" aria-label="Закрыть"></button>
 
       </section>
     </section>
@@ -324,15 +323,15 @@
           <div class="modal-top modal-center-container">
             <label>
               <span class="user-field">Ваше имя:</span>
-              <input class="input-field" type="text" name="user-name" placeholder="Имя Фамилия" required>
+              <input class="input-field" type="text" name="user-name" placeholder="Имя Фамилия">
             </label>
             <label>
               <span class="user-field">Ваш e-mail:</span>
-              <input class="input-field" type="email" name="user-email" placeholder="email@example.com" required>
+              <input class="input-field" type="email" name="user-email" placeholder="email@example.com">
             </label>
             <label>
               <span class="user-field">Текст письма:</span>
-              <textarea class="message" name="message" placeholder="В свободной форме" required></textarea>
+              <textarea class="message" name="message" placeholder="В свободной форме"></textarea>
             </label>
           </div>
           <div class="modal-bottom">
@@ -413,6 +412,7 @@
       </div>
     </section>
   </footer>
+  <script src="js/sliders.js"></script>
   <script src="js/feedback-modal.js"></script>
   <script src="js/map-modal.js"></script>
   <script src="js/addition-modal.js"></script>

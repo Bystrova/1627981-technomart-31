@@ -1,11 +1,12 @@
 const feedbackOpenButton = document.querySelector('.contact-us');
 const feedbackPopup = document.querySelector('.feedback-modal');
-const userNameField = feedbackPopup.querySelector('[name =user-name]');
+const userNameField = feedbackPopup.querySelector('[name=user-name]');
 const userEmailField = feedbackPopup.querySelector('[name=user-email');
-const userMessageField = feedbackPopup.querySelector('[name=message]')
+const userMessageField = feedbackPopup.querySelector('[name=message]');
 const feedbackCloseButton = feedbackPopup.querySelector('.close-button');
 const modal = document.querySelector('.addition-modal');
 const feedbackForm = document.querySelector('.feedback-form');
+const submitButton = feedbackPopup.querySelector('.submit-button');
 
 let isStorageSupport = true;
 let storage = '';
@@ -32,23 +33,28 @@ feedbackOpenButton.addEventListener('click', (evt) => {
 
 feedbackCloseButton.addEventListener('click', (evt) => {
   evt.preventDefault();
+  feedbackPopup.classList.remove('modal-error');
   feedbackPopup.classList.remove('modal-show');
 });
 
 window.addEventListener('keydown', (evt) => {
   if (evt.key === 'Esc' || evt.key === 'Escape') {
+    feedbackPopup.classList.remove('modal-error');
     feedbackPopup.classList.remove('modal-show');
   }
 });
 
 feedbackForm.addEventListener('submit', (evt) => {
-  if (!userNameField || !userEmailField || !userMessageField) {
+  if (!userNameField.value || !userEmailField.value || !userMessageField.value) {
     evt.preventDefault();
+    feedbackPopup.classList.remove('modal-error');
+    feedbackPopup.offsetWidth = feedbackPopup.offsetWidth;
+    feedbackPopup.classList.add('modal-error');
   } else {
     if (isStorageSupport) {
       localStorage.setItem('userName', userNameField.value);
-      console.log(userNameField.value);
       localStorage.setItem('userEmail', userEmailField.value);
     }
   }
 });
+

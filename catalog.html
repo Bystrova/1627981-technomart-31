@@ -22,9 +22,8 @@
         </a>
         <div class="header-top-container">
           <form class="search-form">
-            <label class="search-label visually-hidden" for="searching"></label>
-            <input class="search-field" type="search" id="searching" form="search" name="searching"
-              placeholder="Поиск:">
+            <label class="search-label" for="searching" aria-label="Поиск"></label>
+            <input class="search-field" type="search" id="searching" name="searching" placeholder="Поиск:">
             <a href="#" class="search-link"><span class="visually-hidden">Найти</span></a>
           </form>
           <ul class="purchase">
@@ -110,6 +109,7 @@
                 <input type="number" name="price-min" value="0"> -
                 <input type="number" name="price-max" value="30000">
               </div>
+            </div>
           </fieldset>
           <fieldset class="filter-companies">
             <legend class="companies">Производители:</legend>
@@ -319,7 +319,7 @@
                 <button class="continue-button" type="button">Продолжить покупки</button>
               </div>
             </div>
-            <button class="close-button" type=" button" aria-label="Закрыть"></button>
+            <button class="close-button" type="button" aria-label="Закрыть"></button>
 
           </section>
         </section>
