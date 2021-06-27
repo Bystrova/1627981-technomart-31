@@ -458,6 +458,7 @@ a {
   font-style: italic;
   margin: 0;
   padding: 0 0 0 30px;
+  width: 227px;
 }
 
 .header-phone {
@@ -469,7 +470,7 @@ a {
 
   display: block;
   padding: 4px 47px 5px 71px;
-  margin: 3px 0 0 42px;
+  margin: 3px 0 0 15px;
   position: relative;
 }
 
@@ -486,7 +487,7 @@ a {
 
 .header-address {
   font-size: 14px;
-  margin: 3px 0 0 42px;
+  margin: 3px 0 0 15px;
   text-align: center;
 }
 
@@ -622,6 +623,7 @@ a {
   width: 300px;
   min-height: 123px;
   position: relative;
+  background-color: var(--special-blue);
 }
 
 .category::before {
@@ -669,24 +671,21 @@ a {
   top: 32px;
 }
 
-.category:first-child {
+.category-materials,
+.category-delivery {
   background-color: var(--special-yellow);
 }
 
-.category:nth-child(2) {
+.category-tool {
   background-color: var(--special-blue);
 }
 
-.category:nth-child(3) {
+.category-technic {
   background-color: var(--special-purple);
 }
 
-.category:nth-child(4) {
+.category-discount {
   background-color: var(--special-light-green);
-}
-
-.category:nth-child(5) {
-  background-color: var(--special-yellow);
 }
 
 .category-name {
@@ -796,7 +795,6 @@ a {
 
 .all-popular {
   min-width: 192px;
-  margin: 25px 14px 26px 0;
 }
 
 .about-company {
@@ -917,7 +915,6 @@ a {
 }
 
 .popular {
-  height: 89px;
   background-color: var(--basic-extra-light);
   display: -ms-grid;
   display: grid;
@@ -926,6 +923,7 @@ a {
   grid-template-columns: 1fr -webkit-min-content;
   grid-template-columns: 1fr min-content;
   margin-bottom: 20px;
+  padding: 29px 14px 30px 28px;
 }
 
 .popular-heading {
@@ -935,7 +933,7 @@ a {
   font-size: 30px;
   line-height: 30px;
   font-weight: normal;
-  padding: 30px 0 20px 27px;
+  align-self: center;
   margin: 0;
 }
 
@@ -1311,6 +1309,10 @@ a {
 .company-description,
 .contacts-description {
   font-size: 13px;
+}
+
+.service-slider-description {
+  max-width: 350px;
 }
 
 .service-name-button {
@@ -2172,14 +2174,14 @@ a {
   background-color: var(--basic-extra-light);
   font-size: 17px;
   line-height: 18px;
-  width: 95px;
+  width: 85px;
   border: none;
-  padding: 10px 0;
+  padding: 10px 0 10px 10px;
   text-align: center;
   border-radius: 3px;
 }
 
-.price-min-max input:first-child {
+.price-min-max input:first-of-type {
   margin-right: 12px;
 }
 

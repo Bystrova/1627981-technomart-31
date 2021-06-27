@@ -101,13 +101,15 @@
               <div class="price-bar">
                 <div class="choose-bar"></div>
               </div>
-              <div class="handle handle-min"></div>
-              <div class="handle handle-max"></div>
+              <div class="handle handle-min" aria-label="Минимальная цена"></div>
+              <div class="handle handle-max" aria-label="Максимальная цена"></div>
             </div>
             <div class="price-range-input">
               <div class="price-min-max">
-                <input type="number" name="price-min" value="0"> -
-                <input type="number" name="price-max" value="30000">
+                <label for="price-min" aria-label="Минимальная цена"></label>
+                <input type="number" name="price-min" id="price-min" value="0"> -
+                <label for="price-max" aria-label="Максимальная цена"></label>
+                <input type="number" name="price-max" id="price-max" value="30000">
               </div>
             </div>
           </fieldset>
