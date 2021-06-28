@@ -923,7 +923,7 @@ a {
   grid-template-columns: 1fr -webkit-min-content;
   grid-template-columns: 1fr min-content;
   margin-bottom: 20px;
-  padding: 29px 14px 30px 28px;
+  padding: 26px 14px 25px 28px;
 }
 
 .popular-heading {
