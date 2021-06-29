@@ -73,6 +73,7 @@
   --special-purple: #DC91D8;
   --special-light-green: #8ED78F;
   --special-opacity-white: rgba(255, 255, 255, 0.3);
+  --special-opacity-grey: rgba(197, 197, 197, 0.3);
   --modal-grey: #F4F4F4;
   --middle-dark: #405068;
   --special-red: #FF5357;
@@ -411,8 +412,8 @@ a {
   width: 14px;
   height: 16px;
   background-image: url("../img/icons/basket.svg");
+  background-repeat: no-repeat;
   opacity: 0.3;
-
   position: absolute;
   left: 23px;
   top: 13px;
@@ -712,7 +713,7 @@ a {
 }
 
 .category-property:hover {
-  background-color: var(--special-hover-grey);
+  background-color: var(--special-opacity-grey);
 }
 
 .category-property:active {
@@ -964,26 +965,6 @@ a {
   padding: 3px 18px 21px;
   position: relative;
   width: 182px;
-}
-
-.goods .popular-item>*:nth-child(1) {
-  -ms-grid-row: 1;
-  -ms-grid-column: 1;
-}
-
-.goods .popular-item>*:nth-child(2) {
-  -ms-grid-row: 2;
-  -ms-grid-column: 1;
-}
-
-.goods .popular-item>*:nth-child(3) {
-  -ms-grid-row: 3;
-  -ms-grid-column: 1;
-}
-
-.goods .popular-item>*:nth-child(4) {
-  -ms-grid-row: 4;
-  -ms-grid-column: 1;
 }
 
 .goods .popular-item:hover {
@@ -1400,18 +1381,24 @@ a {
   list-style: none;
   font-size: 18px;
   line-height: 24px;
-  margin: 0 0 20px 0;
+  margin: 0 0 20px 37px;
   padding: 0;
 }
 
-.dash {
-  display: inline-block;
+.transport-companies li {
+  position: relative;
+  margin: 0 0 12px 0;
+  padding: 0;
+}
+
+.transport-companies li::before {
+  content: "";
   width: 25px;
   height: 2px;
   background-color: var(--basic-red);
-  border: none;
-  margin: 0 12px 3px 0;
-  padding: 0;
+  position: absolute;
+  top: 12px;
+  left: -37px;
 }
 
 .company-description {
@@ -1420,11 +1407,6 @@ a {
 
 .transport-companies-description {
   margin: 0;
-}
-
-.transport-companies li {
-  margin: 0 0 12px 0;
-  padding: 0;
 }
 
 .contacts {
@@ -1774,8 +1756,8 @@ a {
   background-repeat: no-repeat;
   border: none;
   background-color: transparent;
-  top: 21px;
-  right: 11px;
+  top: 18px;
+  right: 12px;
   cursor: pointer;
   -webkit-transition: -webkit-transform 0.4s;
   transition: -webkit-transform 0.4s;
@@ -1804,7 +1786,7 @@ a {
   top: 50%;
   -webkit-transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
+  transform: translate(-51%, -50%);
   background-image: url(../img/modal-map.png);
   background-repeat: no-repeat;
   display: none;
@@ -2170,16 +2152,25 @@ a {
   align-items: center;
 }
 
-.price-min-max input[type="number"] {
+.input-price {
   background-color: var(--basic-extra-light);
   font-size: 17px;
   line-height: 18px;
-  width: 85px;
+  width: 95px;
   border: none;
-  padding: 10px 0 10px 10px;
+  padding: 10px 0;
   text-align: center;
   border-radius: 3px;
+  -moz-appearance: textfield;
+  margin: 0;
+
 }
+
+.input-price::-webkit-outer-spin-button,
+.input-price::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+
 
 .price-min-max input:first-of-type {
   margin-right: 12px;
@@ -2250,7 +2241,7 @@ a {
 }
 
 .company-checkbox:disabled+label::before {
-  opacity: 0.5;
+  opacity: 0.3;
 }
 
 .accumulators-radio+label::before {
@@ -2293,7 +2284,7 @@ a {
 
 .accumulators-radio:disabled+label::before,
 .accumulators-radio:disabled+label::after {
-  opacity: 0.5;
+  opacity: 0.4;
 }
 
 .show-button {
@@ -2329,7 +2320,7 @@ a {
 }
 
 .showcase {
-  margin-bottom: 59px;
+  margin-bottom: 49px;
 }
 
 .sorting-container {
@@ -2495,10 +2486,11 @@ a {
   display: -ms-flexbox;
 
   display: flex;
+  flex-wrap: wrap;
 }
 
 .page-list li {
-  margin-right: 10px;
+  margin: 0 10px 10px 0;
 }
 
 .page-link {
@@ -2560,13 +2552,13 @@ a {
   min-width: 620px;
   background-color: var(--basic-white);
   -webkit-box-shadow: 0px 4px 20px var(--modal-shadow), inset 0px 7px 0px var(--basic-red);
-  box-shadow: 0px 4px 20px var(--modal-shadow), inset 0px 7px 0px var(--basic-red);
-  left: 50%;
+  box-shadow: 0px 4px 20px var(--modal-shadow), inset 0 7px 0px var(--basic-red);
+  left: 51%;
   top: 50%;
   -webkit-transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
-  padding-top: 36px;
+  padding-top: 50px;
   display: none;
 }
 
